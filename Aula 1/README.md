@@ -14,8 +14,8 @@
       (html lista)
       (Projeto: Imobiliária e padaria)
 
-5-  Aprenda a construir um website com imagens de fundo e efeitos de fundo: background image e color, valores relativos, definindo o tamanho dos elementos, overflow, exibindo e ocultando elementos, box-sizing, box-shadow, elementos fixos na tela, position absolute, position relative
-(Projeto: Superman, Carros, pedidos de pizza)
+5-  Aprenda a construir um website com imagens de fundo e efeitos de fundo: background image e color, valores relativos, definindo o tamanho dos elementos, overflow, exibindo e ocultando elementos, box-sizing, box-shadow, elementos fixos na tela, position absolute, position relative.
+(Projeto: Superman, Carros, pedidos de pizza e cafeteria)
 
 
 
