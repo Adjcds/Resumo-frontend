@@ -1,6 +1,6 @@
  # Resumo-de-estudo
 
-### 1- Introdução a carreira front end. 
+### 1- Colocar resumos das aulas junto com projetos. 
 
 ### 2-  Aprenda a construir seu primeiro documento html: Títulos, parágrafos, imagens e links. 
       (Explicação e  Projeto: Parque estadual  e Barbearia)
