@@ -1,23 +1,69 @@
 * {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-body {
-    
-    height: 100px;
-    background-color: #0f0000;
-    background-image: url(../foto.jpg);
-    background-repeat: no-repeat;
+.container-parallax1 {
+position: relative;
+    background-position: center;
     background-size: cover;
-    background-position: top center;
+    background-attachment: fixed;
+}
 
+.container-parallax1 {
+    background-image: url("foto.jpg");
+    height: 100vh;
+}
+
+.container-parallax1 h1 {
+    top: 5%;
+    right: 0;
+    left: 0;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Fraunces", serif;
+    font-size: 80px;
+}
+
+.container-parallax1 p {
+    top: 35%;
+    right: 0;
+    left: 0;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-weight: 40;
+    font-family: "Fraunces", serif;
+    font-size: 20px;
+}
+
+
+.container-parallax1 .icon {
+    margin-left: 50px;
+    margin-bottom: 5px;
+    
+    
     
 }
 
- span{
+.container-parallax1 footer {
+    top: 40%;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    line-height: 550px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    width: 100%;
+   
+    
+   
+}
 
- }
 
 h1 {
     font-size: 60px;
@@ -51,7 +97,7 @@ nav.menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.986);
     position: relative;
 }
   
@@ -108,7 +154,7 @@ nav.menu {
     
    
 }
-@media (min-width: 992px) {
+@media (min-width: 990px) {
 .nav  .nav-btn { padding-top: 1.75rem;
         background-color: transparent;
         box-shadow: none;
@@ -176,175 +222,69 @@ nav.menu {
 /*icones*/
 *{margin: 0; padding: 0; box-sizing: border-box;}
 .main{
-    display: flex;
+    
     align-items: center;
-    margin-top: 40px;
     justify-content: center;
     background: rgba(107, 47, 47, 0);
 }
-
+.icons {
+	display: flex;
+	column-gap: 25px;
+}
 .icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    background: #ffffff88;
-    margin: 10px;
-    text-align: center;
-    font-size: 25px;
-    line-height: 50px;
-    font-family: sans-serif;
-    overflow: hidden;
-    transition: all .3s ease-out;
+	display: inline-flex;
+	width: 60px;
+    min-width: 30px;
+	height: 60px;
+    min-height: 30px;
+    margin-top: 300px;
+	text-decoration: none;
+	font-size: 26px;
+	color: #fff;
+	border-radius: 50%;
+	outline: 2px solid #fff;
+	transition-property: outline-offset, outline-color, background-color;
+	transition-duration: 0.25s;
+}
+.icon:hover {
+	outline-offset: 4px;
+}
+.icon i {
+	margin: auto;
+}
+.icon:hover i {
+	animation: shake 0.25s;
+}
+.icon--instagram:hover {
+	background-image: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	outline-color: #a02d76;
 }
 
-.icon:hover{
-    width: 100px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: black;
+.icon--linkedin:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5;
 }
-.icon:hover i{
-    color: rgba(255, 10, 10, 0.938);
+.icon--github:hover {
+	background-color: #000000;
+	outline-color: #000000;
 }
-
-.icon .fa-instagram{
-    color: #ff00ff;
-}
-.icon :hover {
-    background: #a1139a02;
-}
-.icon .fa-linkedin-in{
-    color: #0077B5;
-}
-
-.icon .fa-github{
-    color: #0f0000;
-}
-
-
-
-
-/* responsive */
-@media only screen and (min-width: 320px) and (max-width: 1440px) {
-    .main{
-        flex-direction: row;
-    }
-}
-
-
-
-/* Header */
-
-@-moz-keyframes header {
-    0% {
-        -moz-transform: translate3d(0,1em,0);
-        -webkit-transform: translate3d(0,1em,0);
-        -ms-transform: translate3d(0,1em,0);
-        transform: translate3d(0,1em,0);
-        opacity: 0;
-    }
-
-    100% {
-        -moz-transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes header {
-    0% {
-        -moz-transform: translate3d(0,1em,0);
-        -webkit-transform: translate3d(0,1em,0);
-        -ms-transform: translate3d(0,1em,0);
-        transform: translate3d(0,1em,0);
-        opacity: 0;
-    }
-
-    100% {
-        -moz-transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes header {
-    0% {
-        -moz-transform: translate3d(0,1em,0);
-        -webkit-transform: translate3d(0,1em,0);
-        -ms-transform: translate3d(0,1em,0);
-        transform: translate3d(0,1em,0);
-        opacity: 0;
-    }
-
-    100% {
-        -moz-transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-    }
-}
-
-@keyframes header {
-    0% {
-        -moz-transform: translate3d(0,1em,0);
-        -webkit-transform: translate3d(0,1em,0);
-        -ms-transform: translate3d(0,1em,0);
-        transform: translate3d(0,1em,0);
-        opacity: 0;
-    }
-
-    100% {
-        -moz-transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-    }
-}
-
-
-#header {
-    -moz-animation: header 1s 0.25s forwards;
-    -webkit-animation: header 1s 0.25s forwards;
-    -ms-animation: header 1s 0.25s forwards;
-    animation: header 1s 0.25s forwards;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    cursor: default;
-    display: inline-block;
-    opacity: 0;
-    position: relative;
-    text-align: center;
-    top: 8rem;
-    vertical-align: middle;
-    width: 100%;
-    
-}
-
-   
-
-
-
-/* Footer */
-#footer {
-    color: rgb(255, 255, 255);
-    cursor: default;
-    line-height: 550px;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    
-}
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
