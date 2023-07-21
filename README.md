@@ -158,7 +158,21 @@
  ### Justify-content 
     
    é uma propriedade CSS aplicada ao flex container que define como os itens flexíveis serão distribuídos ao longo do eixo principal. Ela controla o espaçamento entre os itens flexíveis e o alinhamento do próprio conjunto de itens. Alguns valores comuns incluem: flex-start (alinhar ao início do eixo), flex-end (alinhar ao final do eixo), center (centralizar ao longo do eixo), space-between (espaçar igualmente entre os itens) e space-around (espaçar igualmente ao redor dos itens).
+   
+   justify-content
 
+flex-start: Os itens se alinham ao lado esquerdo do contêiner.
+
+flex-end: Os itens se alinham ao lado direito do contêiner.
+
+center: Os itens se alinham no centro do contêiner.
+
+space-between: Os itens são exibidos com espaçamento igual entre eles.
+
+space-around: Os itens são exibidos com espaçamento igual ao redor deles.
+
+ #### Jogo do sapinho para aprender a posicionar os intens  <a href="https://flexboxfroggy.com/">Sapinho</a>
+ 
  ### Align-items 
    
    é outra propriedade CSS aplicada ao flex container que define como os itens flexíveis serão alinhados ao longo do eixo transversal. Ela controla o posicionamento vertical dos itens flexíveis dentro do contêiner. Alguns valores comuns incluem: flex-start (alinhar ao topo do contêiner), flex-end (alinhar à base do contêiner), center (centralizar verticalmente no contêiner), baseline (alinhar pela linha de base) e stretch (alongar os itens para preencher a altura total do contêiner).
