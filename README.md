@@ -178,3 +178,33 @@ space-around: Os itens são exibidos com espaçamento igual ao redor deles.
    é outra propriedade CSS aplicada ao flex container que define como os itens flexíveis serão alinhados ao longo do eixo transversal. Ela controla o posicionamento vertical dos itens flexíveis dentro do contêiner. Alguns valores comuns incluem: flex-start (alinhar ao topo do contêiner), flex-end (alinhar à base do contêiner), center (centralizar verticalmente no contêiner), baseline (alinhar pela linha de base) e stretch (alongar os itens para preencher a altura total do contêiner).
 
 Em resumo, o flexbox é uma poderosa técnica de layout CSS que permite criar designs flexíveis e responsivos, utilizando o display flex para transformar um elemento em um contêiner flex. A propriedade flex-direction define a direção principal dos itens dentro desse contêiner, enquanto justify-content e align-items controlam o espaçamento e o alinhamento ao longo dos eixos principal e transversal, respectivamente.
+
+### Pseudo-classes:
+
+ first-of-type: Seleciona o primeiro elemento de seu tipo entre seus irmãos. Por exemplo, selecionará o primeiro elemento entre outros elementos irmãos.p:first-of-type<p><p>
+
+nth-of-type: Seleciona elementos de um tipo específico com base em seu índice entre irmãos. Ele usa a palavra-chave para representar uma fórmula, como ou . Por exemplo, seleciona todos os elementos pares.n2n3n+1p:nth-of-type(2n)<p>
+
+last-of-type: Seleciona o último elemento de seu tipo entre seus irmãos. Semelhante ao , mas seleciona o último.first-of-type
+
+first-child: Seleciona o primeiro elemento filho de seu pai. Isso não se importa com o tipo; ele só olha para a posição do elemento.
+
+last-child: Seleciona o último elemento filho de seu pai. Semelhante ao , mas seleciona o último.first-child
+
+nth-child: seleciona elementos com base em seu índice entre irmãos, independentemente do tipo de elemento. Como , ele também usa a palavra-chave.nth-of-typen
+
+nth-last-child: Seleciona elementos com base em seu índice entre irmãos, contando a partir do final. É semelhante ao , mas a contagem começa a partir do último elemento.nth-child
+
+hover: Aplica estilos a um elemento quando o usuário passa o mouse sobre ele com o cursor.
+
+ ### Pseudo-elementos:
+
+ ::first-letter: Seleciona a primeira letra de um elemento de nível de bloco e permite que você aplique estilos especificamente a essa primeira letra. Use em CSS (observe os dois pontos) ao definir esse estilo.::first-letter
+
+::first-line: Seleciona a primeira linha de um elemento de nível de bloco e permite que você aplique estilos especificamente a essa primeira linha. Use em CSS (observe os dois pontos) ao definir esse estilo.::first-line
+
+::before: Insere o conteúdo antes do elemento selecionado. Este conteúdo é puramente decorativo e não faz parte do documento HTML. É comumente usado para adicionar elementos decorativos usando CSS.
+
+::after: Insere conteúdo após o elemento selecionado. Como , o conteúdo é puramente decorativo e adicionado usando CSS.::before
+
+Essas pseudoclasses e pseudoelementos fornecem maneiras poderosas de estilizar e segmentar elementos específicos e seus estados dentro de sua página da Web. Lembre-se de usá-los com cuidado e sempre verificar a compatibilidade do navegador, pois alguns navegadores mais antigos podem não suportar certos pseudo-elementos ou pseudo-classes.
