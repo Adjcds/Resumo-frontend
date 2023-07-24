@@ -1,8 +1,4 @@
-/* ======================== */
-/* 
-    Ignore the following styles. They are not important to achieve the effect.
-    I'm only using them for looks (overall page background/font styles/centering content).
-*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
@@ -19,7 +15,6 @@ body {
 	height: 100vh;
 }
 
-/* ======================== */
 .icons {
 	display: flex;
 	column-gap: 25px;
@@ -81,3 +76,4 @@ body {
 	40% {
 		transform: rotate(-15deg);
 	}
+}
