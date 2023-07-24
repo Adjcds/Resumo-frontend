@@ -208,3 +208,47 @@ hover: Aplica estilos a um elemento quando o usuário passa o mouse sobre ele co
 ::after: Insere conteúdo após o elemento selecionado. Como , o conteúdo é puramente decorativo e adicionado usando CSS.::before
 
 Essas pseudoclasses e pseudoelementos fornecem maneiras poderosas de estilizar e segmentar elementos específicos e seus estados dentro de sua página da Web. Lembre-se de usá-los com cuidado e sempre verificar a compatibilidade do navegador, pois alguns navegadores mais antigos podem não suportar certos pseudo-elementos ou pseudo-classes.
+
+#### :hover: é uma pseudoclasse que é aplicada a um elemento quando o usuário passa o mouse sobre ele com o ponteiro do mouse. É comumente usado para alterar a aparência de links, botões e outros elementos interativos quando o usuário interage com eles.:hover
+Exemplo:
+Suponha que você tenha um elemento button em seu HTML como este:
+
+html
+
+<button class="hover-button">Click Me</button>
+
+Você pode aplicar estilos a esse botão quando ele estiver pairando sobre o CSS usando isto:
+
+css
+
+.hover-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+Neste exemplo, quando o usuário passa o mouse sobre o botão, a cor do plano de fundo será alterada para azul () e a cor do texto mudará para branco ().#007bff#fff
+
+#### :visited: é uma pseudo-classe usada especificamente para estilizar links visitados. Ele permite que você aplique estilos diferentes a links que o usuário já visitou em comparação com links que ele ainda não visitou. Isso geralmente é usado para fornecer feedback visual aos usuários sobre os links nos quais eles clicaram.:visited
+Exemplo:
+Suponha que você tenha alguns elementos âncora (link) em seu HTML como este:
+
+html
+
+< a class="visited-link" href="https://www.example.com">Visited Link</a>
+< a class="unvisited-link" href="https://www.example.com">Unvisited Link</a>
+Você pode aplicar estilos aos links visitados e não visitados usando CSS da seguinte maneira:
+
+css
+
+.visited-link:visited {
+  color: purple;
+}
+
+.unvisited-link {
+  color: blue;
+}
+
+Neste exemplo, o link visitado aparecerá na cor roxa e o link não visitado aparecerá na cor azul. Uma vez que o usuário clica no link não visitado, ele mudará para roxo, pois corresponderá à pseudoclasse.:visited
+
+É importante notar que a pseudoclasse tem certas limitações devido a preocupações com a privacidade. Por motivos de segurança, os navegadores podem restringir os estilos que você pode aplicar aos links visitados para evitar possíveis ataques que possam revelar o histórico de navegação de um usuário. Essas restrições geralmente impedem a manipulação de propriedades que poderiam expor essas informações, como alterar a cor de plano de fundo do link.:visited
