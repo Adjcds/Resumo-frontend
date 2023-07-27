@@ -207,6 +207,7 @@ hover: Aplica estilos a um elemento quando o usuário passa o mouse sobre ele co
 
 ::after: Insere conteúdo após o elemento selecionado. Como , o conteúdo é puramente decorativo e adicionado usando CSS.::before
 
+<<<<<<< HEAD
 Essas pseudoclasses e pseudoelementos fornecem maneiras poderosas de estilizar e segmentar elementos específicos e seus estados dentro de sua página da Web. Lembre-se de usá-los com cuidado e sempre verificar a compatibilidade do navegador, pois alguns navegadores mais antigos podem não suportar certos pseudo-elementos ou pseudo-classes.
 
 #### :hover: é uma pseudoclasse que é aplicada a um elemento quando o usuário passa o mouse sobre ele com o ponteiro do mouse. É comumente usado para alterar a aparência de links, botões e outros elementos interativos quando o usuário interage com eles.:hover
@@ -252,3 +253,201 @@ css
 Neste exemplo, o link visitado aparecerá na cor roxa e o link não visitado aparecerá na cor azul. Uma vez que o usuário clica no link não visitado, ele mudará para roxo, pois corresponderá à pseudoclasse.:visited
 
 É importante notar que a pseudoclasse tem certas limitações devido a preocupações com a privacidade. Por motivos de segurança, os navegadores podem restringir os estilos que você pode aplicar aos links visitados para evitar possíveis ataques que possam revelar o histórico de navegação de um usuário. Essas restrições geralmente impedem a manipulação de propriedades que poderiam expor essas informações, como alterar a cor de plano de fundo do link.:visited
+=======
+nth-child(even) é um pseudo-seletor que seleciona os elementos que são filhos de seus pais e possuem um número de ordem par (linha par).
+
+nth-child(odd) é um pseudo-seletor que seleciona os elementos que são filhos de seus pais e possuem um número de ordem ímpar (linha ímpar).
+
+Essas pseudoclasses e pseudoelementos fornecem maneiras poderosas de estilizar e segmentar elementos específicos e seus estados dentro de sua página da Web. Lembre-se de usá-los com cuidado e sempre verificar a compatibilidade do navegador, pois alguns navegadores mais antigos podem não suportar certos pseudo-elementos ou pseudo-classes.
+
+### 8- Aprenda a construir um web site responsivo.
+
+Tópicos
+<header>
+<section>
+<article>
+<nav>
+<aside>
+<main>
+<figure>
+<footer>
+<a>
+<em>
+<strong>
+<cite>
+<q>
+<time>
+Exemplo prático
+header
+O <header> é utilizado para representar o cabeçalho de um documento ou seção declarado no HTML. Nele podemos inserir elementos de <h1> a <h6>, até elementos para representar imagens, parágrafos ou mesmo listas de navegação.
+
+Exemplo de uso de <header>:
+
+<header>
+     <h1>Título da página</h1>
+     <h2>Subtítulo da página</h2>
+</header>
+
+Run
+Nota: Diferentemente da tag <head>, é possível declarar mais de um <header> por página.
+section
+O elemento <section> representa uma seção dentro de um documento e geralmente contém um título, o qual é definido por meio de um dos elementos entre <h1> e <h6>. Podemos utilizar o <section>, por exemplo, para descrever as seções/tópicos de um documento.
+
+Exemplo de uso de <section>:
+
+<section>
+    <h3>Seção 1</h3>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+</section>
+
+Run
+article
+Utilizamos o elemento <article> quando precisamos declarar um conteúdo que não precisa de outro para fazer sentido em um documento HTML, por exemplo, um artigo em um blog. É recomendado identificar cada <article> com um título.
+
+Exemplo de uso de <article>:
+
+<article>
+    <h3>Título do artigo 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+</article>
+<article>
+    <h3>Título do artigo 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+</article>
+
+Run
+nav
+O elemento <nav> é utilizado quando precisamos representar um agrupamento de links de navegação, que, por sua vez, são criados com os elementos <ul>, <li> e <a>.
+
+Exemplo de uso de <nav>:
+
+<nav>
+ <ul>
+ <li><a href=”#”>pagina 1</a></li>
+ <li><a href=”#”>pagina 2</a></li>
+ <li><a href=”#”>pagina 3</a></li>
+ <li><a href=”#”>pagina 4</a></li>
+ </ul>
+</nav>
+
+Run
+Nota: Podemos declarar o <nav> em qualquer lugar do documento que contenha uma lista de links, inclusive no <header>.
+aside
+O elemento <aside> é utilizado quando precisamos criar um conteúdo de apoio/adicional ao conteúdo principal. Por exemplo, ao falar de HTML semântico, podemos indicar ao leitor outros conteúdos sobre a linguagem HTML como sugestão de leitura complementar.
+
+Exemplo de uso de <aside>:
+
+<aside>
+  <nav>
+    <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+        <li>Link 4</li>
+     </ul>
+  </nav>
+</aside>
+
+Run
+main
+O elemento <main> especifica o conteúdo principal e, consequentemente, de maior relevância dentro da página. Para ser considerada bem construída, uma página deve apresentar apenas um conteúdo principal.
+
+Exemplo de uso de <main>:
+
+<main>
+  <h2>Titulo</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ...</p>
+
+  <article>
+     <h3>Subtítulo</h3>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
+   </article>
+</main>
+
+Run
+Nota: O conteúdo declarado dentro da tag <main> deve ser único no documento, incluindo links e imagens.
+figure
+O elemento <figure> é uma marcação de uso específico para a inserção de uma figura. Para incluir a descrição dessa figura, podemos utilizar o elemento <figcaption>.
+
+Exemplo de uso de <figure>:
+
+<figure>
+  <img src=”http://meusite.com.br/assets/imagem.jpg” alt=”Imagem”>
+</figure>
+
+Run
+Exemplo de uso de <figure> com <figcaption>:
+
+<figure>
+   <img src=”http://meusite.com.br/assets/imagem.jpg” alt=”Imagem”>
+
+   <figcaption>Figura 1. Imagem</figcaption>
+</figure>
+
+Run
+footer
+O elemento <footer> representa um rodapé de um documento, como a área presente no final de uma página web. Normalmente é utilizado para descrever informações de autoria, como nome e contato do autor, e data de criação do conteúdo.
+
+Exemplo de uso de <footer>:
+
+<footer>
+     <p>Escrito por Estevão Dias</p>
+     <p>Publicado em 25/03/2017 </p>
+</footer>
+
+Run
+Semântica no nível do texto
+Além da semântica estrutural, o HTML nos permite descrever o significado de um conteúdo em nível de texto utilizando um conjunto de elementos semânticos. Assim, é possível, por exemplo, destacar os trechos de texto que devem receber algum tipo de destaque.
+
+a
+A principal função do elemento <a> é descrever um link, conectando os diversos documentos de um site e permitindo a navegação por esse conteúdo. Normalmente esses documentos estão relacionados por compartilharem um assunto em comum.
+
+Exemplo de uso de <a>:
+
+<a href=”http://www.devmedia.com.br” alt=”DevMedia”>DevMedia</a>
+
+Run
+em
+O elemento <em> é utilizado quando desejamos enfatizar um trecho ou palavra no texto, indicando que ela contribui de forma mais relevante para o sentido/compreensão do conteúdo.
+
+Exemplo de uso de <em>:
+
+<p>Você <em>tem certeza</em> que essa definição está correta?</p>
+
+Run
+Dessa forma enfatizamos o trecho mais relevante da pergunta.
+
+strong
+O elemento <strong> também é utilizado para destacar uma parte do texto. Sua principal diferença em relação ao elemento <em> é que <em> pode alterar o propósito de uma frase, como vimos anteriormente.
+
+Exemplo de uso de <strong>:
+
+<p>Compreender esses elementos HTML é importante porque
+<strong>possibilita o desenvolvimento de soluções web modernas</strong>.</p>
+
+Run
+cite e q
+O elemento <cite> é utilizado para declarar que naquele trecho há uma citação, isto é, um trecho de texto que não foi escrito pelo autor do conteúdo. Normalmente utiliza-se o <cite> em conjunto com o elemento <q>, responsável por apresentar o conteúdo retirado de outra fonte.
+
+Exemplo de uso de <cite> e <q>:
+
+<p>
+<q>Lorem ipsum dolor sit amet, consectetur </q> - <cite>http://br.lipsum.com/</cite>.
+</p>
+
+Run
+time
+O elemento <time> é utilizado para representar datas. Assim, caso seja necessário informar a data em que um conteúdo foi escrito, podemos declarar a tag <time> e acrescentar a ela o atributo datetime para escrever a data de forma padronizada.
+
+<time datetime=”2017-04-07”>4/7</time>
+
+<header>: Usada para definir o cabeçalho da página ou de uma seção específica.
+<nav>: Usada para definir uma seção de navegação.
+<main>: Usada para definir o conteúdo principal da página.
+<section>: Usada para agrupar um conteúdo relacionado e significativo.
+<article>: Usada para definir um conteúdo independente e autônomo, como um post de blog ou um artigo.
+<aside>: Usada para definir um conteúdo complementar, que é relacionado, mas não faz parte do conteúdo principal.
+<footer>: Usada para definir o rodapé da página ou de uma seção específica.
+>>>>>>> efb6dc4 (aula 7)
