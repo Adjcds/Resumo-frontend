@@ -252,13 +252,13 @@ css
 
 Neste exemplo, o link visitado aparecerá na cor roxa e o link não visitado aparecerá na cor azul. Uma vez que o usuário clica no link não visitado, ele mudará para roxo, pois corresponderá à pseudoclasse.:visited
 
-É importante notar que a pseudoclasse tem certas limitações devido a preocupações com a privacidade. Por motivos de segurança, os navegadores podem restringir os estilos que você pode aplicar aos links visitados para evitar possíveis ataques que possam revelar o histórico de navegação de um usuário. Essas restrições geralmente impedem a manipulação de propriedades que poderiam expor essas informações, como alterar a cor de plano de fundo do link.:visited
-=======
+  É importante notar que a pseudoclasse tem certas limitações devido a preocupações com a privacidade. Por motivos de segurança, os navegadores podem restringir os estilos que você pode aplicar aos links visitados para evitar possíveis ataques que possam revelar o histórico de navegação de um usuário. Essas restrições geralmente impedem a manipulação de propriedades que poderiam expor essas informações, como alterar a cor de plano de fundo do link.:visited
+
 nth-child(even) é um pseudo-seletor que seleciona os elementos que são filhos de seus pais e possuem um número de ordem par (linha par).
 
 nth-child(odd) é um pseudo-seletor que seleciona os elementos que são filhos de seus pais e possuem um número de ordem ímpar (linha ímpar).
 
-Essas pseudoclasses e pseudoelementos fornecem maneiras poderosas de estilizar e segmentar elementos específicos e seus estados dentro de sua página da Web. Lembre-se de usá-los com cuidado e sempre verificar a compatibilidade do navegador, pois alguns navegadores mais antigos podem não suportar certos pseudo-elementos ou pseudo-classes.
+  Essas pseudoclasses e pseudoelementos fornecem maneiras poderosas de estilizar e segmentar elementos específicos e seus estados dentro de sua página da Web. Lembre-se de usá-los com cuidado e sempre verificar a compatibilidade do navegador, pois alguns navegadores mais antigos podem não suportar certos pseudo-elementos ou pseudo-classes.
 
 ### 8- Aprenda a construir um web site responsivo.
 
@@ -487,7 +487,8 @@ Para que possamos assegurar o funcionamento das regras responsivas em todos os d
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-#### Media Type é o responsável por designar quais regras CSS serão interpretadas por um determinado tipo de dispositivo, oferecendo a melhor apresentação possível do conteúdo sem a necessidade de alteração do mesmo.
+#### Media Type 
+é o responsável por designar quais regras CSS serão interpretadas por um determinado tipo de dispositivo, oferecendo a melhor apresentação possível do conteúdo sem a necessidade de alteração do mesmo.
 
 Dentre os diversos tipos de Media Type, alguns se destacam e são importantes ao conhecimento do leitor:
 
@@ -791,3 +792,73 @@ Caso a complexidade do HTML aumente, podemos concluir que a abordagem anterior p
 
 * { margin: 0; padding: 0; }
 Com isso, ao invés de informarmos cada elemento do DOM que será resetado, com o operador * determinamos que todos eles o serão. Assim, é garantido que, independentemente do que for inserido no HTML, teremos um design responsivo sem diferenças entre os navegadores.
+
+### Resumo sobre @media no CSS:
+
+A regra @media é uma parte fundamental do CSS que permite aplicar estilos específicos com base em certas condições de mídia, como tamanho de tela, orientação, resolução e muito mais. Isso permite que os desenvolvedores criem layouts responsivos e adaptem o design da página a diferentes dispositivos e contextos.
+
+Sintaxe:
+
+css
+
+@media tipo-de-mídia e (condições) {
+  /* Estilos a serem aplicados para essa mídia e condições */
+}
+Exemplos de tipos de mídia:
+
+screen: Dispositivos de tela, como monitores, tablets e smartphones.
+print: Dispositivos de impressão, como impressoras.
+speech: Dispositivos de fala, como leitores de tela.
+
+Exemplos de condições:
+width: Largura da janela do navegador.
+height: Altura da janela do navegador.
+min-width / max-width: Largura mínima / máxima da janela.
+min-height / max-height: Altura mínima / máxima da janela.
+orientation: Orientação da tela (retrato ou paisagem).
+resolution: Resolução da tela.
+aspect-ratio: Proporção de aspecto da tela.
+E muitos outros...
+Exemplos de uso:
+
+Aplicar estilos diferentes para dispositivos móveis e desktops:
+css
+
+@media screen and (max-width: 768px) {
+  /* Estilos para dispositivos móveis */
+}
+
+@media screen and (min-width: 769px) {
+  /* Estilos para desktops */
+}
+Ocultar um elemento em dispositivos de impressão:
+css
+
+@media print {
+  .elemento-a-ser-ocultado {
+    display: none;
+  }
+}
+Ajustar estilos com base na orientação da tela:
+css
+
+@media screen and (orientation: landscape) {
+  /* Estilos para orientação paisagem */
+}
+
+@media screen and (orientation: portrait) {
+  /* Estilos para orientação retrato */
+}
+Adaptar estilos para telas de alta resolução:
+css
+
+@media screen and (min-resolution: 2dppx) {
+  /* Estilos para telas de alta resolução */
+}
+Criar uma folha de estilos específica para leitores de tela:
+css
+
+@media speech {
+  /* Estilos para leitores de tela */
+}
+A regra @media é uma ferramenta poderosa para criar designs flexíveis e responsivos, permitindo que os desenvolvedores ajustem o layout e o estilo de uma página com base nas características do dispositivo e da mídia em que está sendo exibida.
