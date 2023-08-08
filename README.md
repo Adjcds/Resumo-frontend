@@ -263,25 +263,26 @@ nth-child(odd) é um pseudo-seletor que seleciona os elementos que são filhos d
 ### 8- Aprenda a construir um web site responsivo.
 
 Tópicos
-<header>
-<section>
-<article>
-<nav>
-<aside>
-<main>
-<figure>
-<footer>
-<a>
-<em>
-<strong>
-<cite>
-<q>
-<time>
+header
+section
+article
+nav
+aside
+main
+figure
+footer
+a
+em
+strong
+cite
+q
+time
+
 Exemplo prático
 header
-O <header> é utilizado para representar o cabeçalho de um documento ou seção declarado no HTML. Nele podemos inserir elementos de <h1> a <h6>, até elementos para representar imagens, parágrafos ou mesmo listas de navegação.
+O header é utilizado para representar o cabeçalho de um documento ou seção declarado no HTML. Nele podemos inserir elementos de h1 a h6, até elementos para representar imagens, parágrafos ou mesmo listas de navegação.
 
-Exemplo de uso de <header>:
+Exemplo de uso de header:
 
 <header>
      <h1>Título da página</h1>
@@ -289,11 +290,12 @@ Exemplo de uso de <header>:
 </header>
 
 Run
-Nota: Diferentemente da tag <head>, é possível declarar mais de um <header> por página.
-section
-O elemento <section> representa uma seção dentro de um documento e geralmente contém um título, o qual é definido por meio de um dos elementos entre <h1> e <h6>. Podemos utilizar o <section>, por exemplo, para descrever as seções/tópicos de um documento.
 
-Exemplo de uso de <section>:
+Nota: Diferentemente da tag head, é possível declarar mais de um header por página.
+section
+O elemento section representa uma seção dentro de um documento e geralmente contém um título, o qual é definido por meio de um dos elementos entre h1 e h6. Podemos utilizar o section, por exemplo, para descrever as seções/tópicos de um documento.
+
+Exemplo de uso de section:
 
 <section>
     <h3>Seção 1</h3>
@@ -303,9 +305,9 @@ Exemplo de uso de <section>:
 
 Run
 article
-Utilizamos o elemento <article> quando precisamos declarar um conteúdo que não precisa de outro para fazer sentido em um documento HTML, por exemplo, um artigo em um blog. É recomendado identificar cada <article> com um título.
+Utilizamos o elemento articl> quando precisamos declarar um conteúdo que não precisa de outro para fazer sentido em um documento HTML, por exemplo, um artigo em um blog. É recomendado identificar cada <article> com um título.
 
-Exemplo de uso de <article>:
+Exemplo de uso de article:
 
 <article>
     <h3>Título do artigo 1</h3>
@@ -318,9 +320,9 @@ Exemplo de uso de <article>:
 
 Run
 nav
-O elemento <nav> é utilizado quando precisamos representar um agrupamento de links de navegação, que, por sua vez, são criados com os elementos <ul>, <li> e <a>.
+O elemento nav é utilizado quando precisamos representar um agrupamento de links de navegação, que, por sua vez, são criados com os elementos ul, li e a.
 
-Exemplo de uso de <nav>:
+Exemplo de uso de nav:
 
 <nav>
  <ul>
@@ -332,11 +334,11 @@ Exemplo de uso de <nav>:
 </nav>
 
 Run
-Nota: Podemos declarar o <nav> em qualquer lugar do documento que contenha uma lista de links, inclusive no <header>.
+Nota: Podemos declarar o nav em qualquer lugar do documento que contenha uma lista de links, inclusive no header.
 aside
-O elemento <aside> é utilizado quando precisamos criar um conteúdo de apoio/adicional ao conteúdo principal. Por exemplo, ao falar de HTML semântico, podemos indicar ao leitor outros conteúdos sobre a linguagem HTML como sugestão de leitura complementar.
+O elemento aside é utilizado quando precisamos criar um conteúdo de apoio/adicional ao conteúdo principal. Por exemplo, ao falar de HTML semântico, podemos indicar ao leitor outros conteúdos sobre a linguagem HTML como sugestão de leitura complementar.
 
-Exemplo de uso de <aside>:
+Exemplo de uso de aside:
 
 <aside>
   <nav>
@@ -349,11 +351,11 @@ Exemplo de uso de <aside>:
   </nav>
 </aside>
 
-Run
 main
-O elemento <main> especifica o conteúdo principal e, consequentemente, de maior relevância dentro da página. Para ser considerada bem construída, uma página deve apresentar apenas um conteúdo principal.
 
-Exemplo de uso de <main>:
+O elemento main especifica o conteúdo principal e, consequentemente, de maior relevância dentro da página. Para ser considerada bem construída, uma página deve apresentar apenas um conteúdo principal.
+
+Exemplo de uso de main:
 
 <main>
   <h2>Titulo</h2>
@@ -366,18 +368,17 @@ Exemplo de uso de <main>:
    </article>
 </main>
 
-Run
-Nota: O conteúdo declarado dentro da tag <main> deve ser único no documento, incluindo links e imagens.
+Nota: O conteúdo declarado dentro da tag main deve ser único no documento, incluindo links e imagens.
 figure
-O elemento <figure> é uma marcação de uso específico para a inserção de uma figura. Para incluir a descrição dessa figura, podemos utilizar o elemento <figcaption>.
+O elemento figure é uma marcação de uso específico para a inserção de uma figura. Para incluir a descrição dessa figura, podemos utilizar o elemento figcaptio>.
 
-Exemplo de uso de <figure>:
+Exemplo de uso de figure:
 
 <figure>
   <img src=”http://meusite.com.br/assets/imagem.jpg” alt=”Imagem”>
 </figure>
 
-Run
+
 Exemplo de uso de <figure> com <figcaption>:
 
 <figure>
@@ -386,103 +387,112 @@ Exemplo de uso de <figure> com <figcaption>:
    <figcaption>Figura 1. Imagem</figcaption>
 </figure>
 
-Run
 footer
-O elemento <footer> representa um rodapé de um documento, como a área presente no final de uma página web. Normalmente é utilizado para descrever informações de autoria, como nome e contato do autor, e data de criação do conteúdo.
+O elemento footer representa um rodapé de um documento, como a área presente no final de uma página web. Normalmente é utilizado para descrever informações de autoria, como nome e contato do autor, e data de criação do conteúdo.
 
-Exemplo de uso de <footer>:
+Exemplo de uso de footer:
 
 <footer>
      <p>Escrito por Estevão Dias</p>
      <p>Publicado em 25/03/2017 </p>
 </footer>
 
-Run
+
 Semântica no nível do texto
 Além da semântica estrutural, o HTML nos permite descrever o significado de um conteúdo em nível de texto utilizando um conjunto de elementos semânticos. Assim, é possível, por exemplo, destacar os trechos de texto que devem receber algum tipo de destaque.
 
 a
-A principal função do elemento <a> é descrever um link, conectando os diversos documentos de um site e permitindo a navegação por esse conteúdo. Normalmente esses documentos estão relacionados por compartilharem um assunto em comum.
 
-Exemplo de uso de <a>:
+A principal função do elemento a é descrever um link, conectando os diversos documentos de um site e permitindo a navegação por esse conteúdo. Normalmente esses documentos estão relacionados por compartilharem um assunto em comum.
+
+Exemplo de uso de a:
 
 <a href=”http://www.devmedia.com.br” alt=”DevMedia”>DevMedia</a>
 
 Run
 em
-O elemento <em> é utilizado quando desejamos enfatizar um trecho ou palavra no texto, indicando que ela contribui de forma mais relevante para o sentido/compreensão do conteúdo.
+O elemento em é utilizado quando desejamos enfatizar um trecho ou palavra no texto, indicando que ela contribui de forma mais relevante para o sentido/compreensão do conteúdo.
 
-Exemplo de uso de <em>:
+Exemplo de uso de em:
 
 <p>Você <em>tem certeza</em> que essa definição está correta?</p>
 
-Run
 Dessa forma enfatizamos o trecho mais relevante da pergunta.
 
 strong
-O elemento <strong> também é utilizado para destacar uma parte do texto. Sua principal diferença em relação ao elemento <em> é que <em> pode alterar o propósito de uma frase, como vimos anteriormente.
+O elemento strong também é utilizado para destacar uma parte do texto. Sua principal diferença em relação ao elemento em é que em pode alterar o propósito de uma frase, como vimos anteriormente.
 
-Exemplo de uso de <strong>:
+Exemplo de uso de strong:
 
 <p>Compreender esses elementos HTML é importante porque
 <strong>possibilita o desenvolvimento de soluções web modernas</strong>.</p>
 
-Run
-cite e q
-O elemento <cite> é utilizado para declarar que naquele trecho há uma citação, isto é, um trecho de texto que não foi escrito pelo autor do conteúdo. Normalmente utiliza-se o <cite> em conjunto com o elemento <q>, responsável por apresentar o conteúdo retirado de outra fonte.
 
-Exemplo de uso de <cite> e <q>:
+cite e q
+O elemento cite é utilizado para declarar que naquele trecho há uma citação, isto é, um trecho de texto que não foi escrito pelo autor do conteúdo. Normalmente utiliza-se o cite em conjunto com o elemento q, responsável por apresentar o conteúdo retirado de outra fonte.
+
+Exemplo de uso de cite e q:
 
 <p>
 <q>Lorem ipsum dolor sit amet, consectetur </q> - <cite>http://br.lipsum.com/</cite>.
 </p>
 
-Run
+
 time
-O elemento <time> é utilizado para representar datas. Assim, caso seja necessário informar a data em que um conteúdo foi escrito, podemos declarar a tag <time> e acrescentar a ela o atributo datetime para escrever a data de forma padronizada.
+O elemento time é utilizado para representar datas. Assim, caso seja necessário informar a data em que um conteúdo foi escrito, podemos declarar a tag time e acrescentar a ela o atributo datetime para escrever a data de forma padronizada.
 
 <time datetime=”2017-04-07”>4/7</time>
 
-<header>: Usada para definir o cabeçalho da página ou de uma seção específica.
-<nav>: Usada para definir uma seção de navegação.
-<main>: Usada para definir o conteúdo principal da página.
-<section>: Usada para agrupar um conteúdo relacionado e significativo.
-<article>: Usada para definir um conteúdo independente e autônomo, como um post de blog ou um artigo.
-<aside>: Usada para definir um conteúdo complementar, que é relacionado, mas não faz parte do conteúdo principal.
-<footer>: Usada para definir o rodapé da página ou de uma seção específica.
+header: Usada para definir o cabeçalho da página ou de uma seção específica.
+
+nav: Usada para definir uma seção de navegação.
+
+main: Usada para definir o conteúdo principal da página.
+
+section: Usada para agrupar um conteúdo relacionado e significativo.
+
+article: Usada para definir um conteúdo independente e autônomo, como um post de blog ou um artigo.
+
+aside: Usada para definir um conteúdo complementar, que é relacionado, mas não faz parte do conteúdo principal.
+
+footer: Usada para definir o rodapé da página ou de uma seção específica.
 
 #### Trabalhando com Design Responsivo em HTML5
 O design responsivo em HTML5 é uma abordagem de desenvolvimento que busca criar sites que se adaptam automaticamente a diferentes tamanhos de tela e dispositivos, proporcionando uma experiência de usuário consistente e amigável em qualquer contexto. Algumas anotações principais sobre trabalhar com design responsivo em HTML5 incluem:
 
-**Características Essenciais de um Site Responsivo:**
+Características Essenciais de um Site Responsivo:
 
-1. **Adaptação do Layout:** O layout da página deve se ajustar conforme a resolução do dispositivo, proporcionando uma visualização otimizada.
-2. **Layout Fluido:** Evite medidas fixas e use unidades flexíveis, como porcentagens e "em", para permitir a adaptação natural do conteúdo.
-3. **Simplificação de Elementos:** Simplifique elementos para dispositivos móveis, levando em conta a menor atenção e tempo do usuário nesses dispositivos.
-4. **Redimensionamento de Mídia:** Redimensione imagens e vídeos para evitar sobrecarga na transferência de dados e garantir visualização nítida.
-5. **Ocultar Elementos Desnecessários:** Remova ou oculte elementos irrelevantes em dispositivos menores para otimizar a experiência.
-6. **Adaptação de Elementos Interativos:** Ajuste o tamanho de botões, links e menus para facilitar a interação por toque em dispositivos móveis.
+1. Adaptação do Layout: O layout da página deve se ajustar conforme a resolução do dispositivo, proporcionando uma visualização otimizada.
 
-**Mobile First:**
+2. Layout Fluido: Evite medidas fixas e use unidades flexíveis, como porcentagens e "em", para permitir a adaptação natural do conteúdo.
+
+3. Simplificação de Elementos: Simplifique elementos para dispositivos móveis, levando em conta a menor atenção e tempo do usuário nesses dispositivos.
+4. Redimensionamento de Mídia: Redimensione imagens e vídeos para evitar sobrecarga na transferência de dados e garantir visualização nítida.
+5. Ocultar Elementos Desnecessários: Remova ou oculte elementos irrelevantes em dispositivos menores para otimizar a experiência.
+6. Adaptação de Elementos Interativos: Ajuste o tamanho de botões, links e menus para facilitar a interação por toque em dispositivos móveis.
+
+Mobile First
+
 É uma estratégia de desenvolvimento que prioriza o design e desenvolvimento para dispositivos móveis, expandindo gradualmente para dispositivos maiores, como tablets e desktops.
 
-**Meta Tag Viewport:**
+Meta Tag Viewport:
+
 A tag `<meta name="viewport">` é usada para controlar a largura e a escala de exibição da página em dispositivos móveis, evitando problemas de dimensionamento.
 
-**Media Types e Media Queries:**
-- **Media Types:** São categorias de dispositivos para os quais o estilo será aplicado, como `screen` (telas), `print` (impressão) e `speech` (leitores de tela).
-- **Media Queries:** Permitem aplicar estilos condicionalmente com base em condições específicas, como largura, altura, orientação e resolução da tela. São usadas com `@media` no CSS.
+Media Types e Media Queries:
+- Media Types: São categorias de dispositivos para os quais o estilo será aplicado, como screen (telas), print (impressão) e speech (leitores de tela).
+- Media Queries: Permitem aplicar estilos condicionalmente com base em condições específicas, como largura, altura, orientação e resolução da tela. São usadas com @media no CSS.
 
-**Operadores em Media Queries:**
-- **not:** Negar o resultado de uma expressão.
-- **only:** Limitar a execução da expressão a dispositivos que suportam Media Features.
-- **and:** Conectar um tipo de mídia a uma ou mais condições.
-- **, (vírgula):** Agrupar expressões para aplicar um conjunto de regras a diferentes situações.
+Operadores em Media Queries:
+- not: Negar o resultado de uma expressão.
+- only: Limitar a execução da expressão a dispositivos que suportam Media Features.
+- and: Conectar um tipo de mídia a uma ou mais condições.
+- , (vírgula): Agrupar expressões para aplicar um conjunto de regras a diferentes situações.
 
-**Breakpoints:**
+Breakpoints:
 Pontos específicos de largura de tela onde regras CSS diferentes podem ser aplicadas para melhorar a experiência do usuário.
 
-**Reset CSS:**
+Reset CSS:
 Padronização das configurações iniciais dos elementos HTML para evitar inconsistências de estilo entre navegadores.
 
 Em resumo, o design responsivo em HTML5 é uma abordagem essencial para criar sites que se adaptam harmoniosamente a diferentes dispositivos e tamanhos de tela, melhorando a usabilidade e a experiência do usuário em todas as situações. O uso de Media Types, Media Queries e breakpoints permite personalizar a aparência e o comportamento do site em diferentes contextos, enquanto o reset CSS ajuda a garantir uma base sólida para o estilo em todos os navegadores.
@@ -502,11 +512,11 @@ Listas de seleção
 Botões
 
 #### Tag <form> no HTML:
-A tag <form> é usada em HTML para criar um formulário que permite aos usuários inserir e enviar dados para um servidor. Ela envolve campos de entrada e outros elementos relacionados ao formulário.
+A tag form é usada em HTML para criar um formulário que permite aos usuários inserir e enviar dados para um servidor. Ela envolve campos de entrada e outros elementos relacionados ao formulário.
 
 #### Inputs e Atributos:
 
-Input (<input>): É usado para coletar dados do usuário. Os tipos mais comuns incluem texto, senha, número e email.
+Input (input): É usado para coletar dados do usuário. Os tipos mais comuns incluem texto, senha, número e email.
 
 Atributos dos Inputs: Alguns atributos comuns incluem:
 
@@ -524,16 +534,18 @@ readonly: Impede que o usuário edite o valor.
 
 disabled: Desativa o input.
 
-Checkbox (<input type="checkbox">):
+Checkbox (input type="checkbox"):
 Uma caixa de seleção que permite que os usuários marquem opções. Pode ser usada para selecionar várias opções simultaneamente.
 
-Radio (<input type="radio">):
+Radio (input type="radio"):
 Botões de opção onde os usuários podem selecionar apenas uma opção dentro de um grupo. Todos os botões de opção do mesmo grupo compartilham o mesmo atributo name.
 
-Select (<select>) e Options (<option>):
-O elemento <select> cria uma lista suspensa de opções. Cada opção é definida por uma tag <option> dentro do <select>. Os usuários podem escolher uma opção da lista.
+Select (select) e Options (option):
+O elemento select cria uma lista suspensa de opções. Cada opção é definida por uma tag option dentro do select. Os usuários podem escolher uma opção da lista.
 
-Fieldset (<fieldset>) e Legend (<legend>):
-A tag <fieldset> agrupa elementos de formulário relacionados. A tag <legend> é usada para fornecer uma legenda ou rótulo para o <fieldset>. Isso ajuda a organizar e estruturar campos relacionados em um formulário.
+Fieldset (fieldset) e Legend (legend):
+
+A tag fieldset agrupa elementos de formulário relacionados. A tag legend é usada para fornecer uma legenda ou rótulo para o fieldset. Isso ajuda a organizar e estruturar campos relacionados em um formulário.
 
 Em resumo, as tags e elementos mencionados formam a base para a criação de formulários interativos em HTML. Eles permitem que os desenvolvedores coletem, processem e validem informações dos usuários, proporcionando uma experiência de entrada de dados amigável e eficiente.
+
