@@ -452,413 +452,88 @@ O elemento <time> é utilizado para representar datas. Assim, caso seja necessá
 <footer>: Usada para definir o rodapé da página ou de uma seção específica.
 
 #### Trabalhando com Design Responsivo em HTML5
+O design responsivo em HTML5 é uma abordagem de desenvolvimento que busca criar sites que se adaptam automaticamente a diferentes tamanhos de tela e dispositivos, proporcionando uma experiência de usuário consistente e amigável em qualquer contexto. Algumas anotações principais sobre trabalhar com design responsivo em HTML5 incluem:
 
-Dentre as características essenciais a um site responsivo, destacam-se:
+**Características Essenciais de um Site Responsivo:**
 
-Adaptar o layout da página de acordo com a resolução em que está sendo visualizada;
-O layout deve ser fluido e não deve fazer uso de medidas fixas, possibilitando a adaptação natural ao dispositivo em questão;
+1. **Adaptação do Layout:** O layout da página deve se ajustar conforme a resolução do dispositivo, proporcionando uma visualização otimizada.
+2. **Layout Fluido:** Evite medidas fixas e use unidades flexíveis, como porcentagens e "em", para permitir a adaptação natural do conteúdo.
+3. **Simplificação de Elementos:** Simplifique elementos para dispositivos móveis, levando em conta a menor atenção e tempo do usuário nesses dispositivos.
+4. **Redimensionamento de Mídia:** Redimensione imagens e vídeos para evitar sobrecarga na transferência de dados e garantir visualização nítida.
+5. **Ocultar Elementos Desnecessários:** Remova ou oculte elementos irrelevantes em dispositivos menores para otimizar a experiência.
+6. **Adaptação de Elementos Interativos:** Ajuste o tamanho de botões, links e menus para facilitar a interação por toque em dispositivos móveis.
 
-Simplificar elementos da tela para dispositivos móveis, onde o usuário normalmente tem menos tempo e menos atenção durante a navegação;
+**Mobile First:**
+É uma estratégia de desenvolvimento que prioriza o design e desenvolvimento para dispositivos móveis, expandindo gradualmente para dispositivos maiores, como tablets e desktops.
 
-Redimensionar as imagens e vídeos para que não sobrecarreguem a transferência de dados e também para que se adaptem ao dispositivo garantindo que os mesmos se apresentem de forma nítida, sem cortes e que não façam uso da barra de rolagem para serem visualizados;
+**Meta Tag Viewport:**
+A tag `<meta name="viewport">` é usada para controlar a largura e a escala de exibição da página em dispositivos móveis, evitando problemas de dimensionamento.
 
-Ocultar ou remover elementos desnecessários nos dispositivos menores;
-Adaptar o tamanho de botões, links e menus para interfaces touch onde o ponteiro do mouse é substituído pelo dedo do usuário.
+**Media Types e Media Queries:**
+- **Media Types:** São categorias de dispositivos para os quais o estilo será aplicado, como `screen` (telas), `print` (impressão) e `speech` (leitores de tela).
+- **Media Queries:** Permitem aplicar estilos condicionalmente com base em condições específicas, como largura, altura, orientação e resolução da tela. São usadas com `@media` no CSS.
 
-Mobile First é uma estratégia de desenvolvimento que diz que todo o planejamento de um projeto web deve iniciar pelos dispositivos móveis e somente depois gradualmente para os outros dispositivos, até chegar nos notebooks e desktops.v
+**Operadores em Media Queries:**
+- **not:** Negar o resultado de uma expressão.
+- **only:** Limitar a execução da expressão a dispositivos que suportam Media Features.
+- **and:** Conectar um tipo de mídia a uma ou mais condições.
+- **, (vírgula):** Agrupar expressões para aplicar um conjunto de regras a diferentes situações.
 
-Meta Tag Viewport
-O termo viewport corresponde à área disponível para exibição de conteúdo que cada dispositivo possui.
+**Breakpoints:**
+Pontos específicos de largura de tela onde regras CSS diferentes podem ser aplicadas para melhorar a experiência do usuário.
 
-O valor do viewport varia de acordo com o dispositivo. Por exemplo, em um computador, o viewport corresponde a área (altura e largura) em pixels ocupada pelo navegador. Portanto, quando o navegador é redimensionado para uma tela menor, automaticamente o seu viewport também se torna menor.
+**Reset CSS:**
+Padronização das configurações iniciais dos elementos HTML para evitar inconsistências de estilo entre navegadores.
 
-Consequentemente, essa característica causa diversos problemas em sites já projetados para o mundo mobile. Isso porque o dispositivo irá encolher o site para exibi-lo de acordo com a largura de 980 pixels, o que impossibilita o funcionamento das regras responsivas, cujo problema a Meta Tag Viewport visa solucionar a partir de agora.
+Em resumo, o design responsivo em HTML5 é uma abordagem essencial para criar sites que se adaptam harmoniosamente a diferentes dispositivos e tamanhos de tela, melhorando a usabilidade e a experiência do usuário em todas as situações. O uso de Media Types, Media Queries e breakpoints permite personalizar a aparência e o comportamento do site em diferentes contextos, enquanto o reset CSS ajuda a garantir uma base sólida para o estilo em todos os navegadores.
 
-A meta tag viewport possui um formato semelhante ao de outras tags meta, conforme podemos observar a seguir:
+### Formulários 
+podem ser usados em uma variedade de contextos. Páginas de contato, login e cadastro, são alguns exemplos de uso de formulário.
 
-<meta name="viewport"content="">
+Neste curso aprenderemos a criar formulários que recebem:
 
-Na declaração do content é possível especificar uma diversidade de parâmetros, tais como:
+Textos
+Números
+Opções
+Telefone
+Data
+Caixas de seleção
+Listas de seleção
+Botões
 
-width: define a largura do viewport.
-height: define a altura do viewport.
-initial-scale: define a escala inicial (zoom) do viewport.
-Para que possamos assegurar o funcionamento das regras responsivas em todos os dispositivos, devemos declarar que a largura do viewport será igual à mesma largura do dispositivo e que a escala inicial (zoom) é 1, conforme demonstrado a seguir:
+#### Tag <form> no HTML:
+A tag <form> é usada em HTML para criar um formulário que permite aos usuários inserir e enviar dados para um servidor. Ela envolve campos de entrada e outros elementos relacionados ao formulário.
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+#### Inputs e Atributos:
 
-#### Media Type 
-é o responsável por designar quais regras CSS serão interpretadas por um determinado tipo de dispositivo, oferecendo a melhor apresentação possível do conteúdo sem a necessidade de alteração do mesmo.
+Input (<input>): É usado para coletar dados do usuário. Os tipos mais comuns incluem texto, senha, número e email.
 
-Dentre os diversos tipos de Media Type, alguns se destacam e são importantes ao conhecimento do leitor:
+Atributos dos Inputs: Alguns atributos comuns incluem:
 
-All: Se refere a todos os tipos de dispositivos.
-Braille: Se refere aos dispositivos táteis.
-Embossed: Se refere aos dispositivos que imprimem em braille.
-Handheld: Se refere aos dispositivos de mão, normalmente com telas pequenas de baixa resolução e largura de banda limitada.
-Print: Se refere aos dispositivos de impressão.
-Projection: Se refere a apresentações do tipo slides.
-Screen: Se refere a monitores ou dispositivos com telas coloridas e resolução adequada.
-Speech: Se refere a sintetizadores de voz ou leitores de tela.
-TTY: Se refere a terminais, teletypes e dispositivos portáteis com display limitado.
-TV: Se refere a televisores ou dispositivos com baixa resolução, quantidade de cores e scroll limitado.
+type: Define o tipo de input (text, password, etc.).
 
-#### Media Queries 
+name: Especifica o nome do campo, usado para identificar o dado no servidor.
 
-aspect-ratio	
-Se refere à proporção entre os valores de largura e altura. Os valores são compostos pela divisão da largura/valor da altura. Não aceita os prefixos min/max.
+value: Define o valor inicial do input.
 
-device-aspect-ratio
-Se refere à proporção entre os valores de largura e altura do dispositivo. Os valores são compostos por valor da largura/valor da altura. Não aceita os prefixos min/max.
+placeholder: Exibe um texto de orientação dentro do input.
 
-Color	
-Se refere ao número de bits por cor. Os valores são numéricos. Aceita os prefixos min/max.
+required: Torna o input obrigatório.
 
-color-index
-	Se refere ao número de entradas na tabela de pesquisa de cores do dispositivo de saída. Os valores são numéricos. Aceita os prefixos min/max.
+readonly: Impede que o usuário edite o valor.
 
-Height
-	Se refere à altura da janela do navegador. Os valores são medidas de comprimento. Aceita os prefixos min/max.
+disabled: Desativa o input.
 
-device-height	
-  Se refere à altura da mídia. Os valores são medidas de comprimento. Aceita os prefixos min/max.
+Checkbox (<input type="checkbox">):
+Uma caixa de seleção que permite que os usuários marquem opções. Pode ser usada para selecionar várias opções simultaneamente.
 
-Width
-	Se refere à largura da janela do navegador. Os valores são medidas de comprimento. Aceita os prefixos min/max.
+Radio (<input type="radio">):
+Botões de opção onde os usuários podem selecionar apenas uma opção dentro de um grupo. Todos os botões de opção do mesmo grupo compartilham o mesmo atributo name.
 
-device-width	
-  Se refere à largura da mídia. Os valores são medidas de comprimento. Aceita os prefixos min/max.
+Select (<select>) e Options (<option>):
+O elemento <select> cria uma lista suspensa de opções. Cada opção é definida por uma tag <option> dentro do <select>. Os usuários podem escolher uma opção da lista.
 
-Grid
-	Se refere ao tipo de dispositivo, se é orientado a bitmaps ou grids. Os valores são 1 para dispositivos orientados a grid e 0 para dispositivos orientados a bitmap. Não aceita os prefixos min/max.
+Fieldset (<fieldset>) e Legend (<legend>):
+A tag <fieldset> agrupa elementos de formulário relacionados. A tag <legend> é usada para fornecer uma legenda ou rótulo para o <fieldset>. Isso ajuda a organizar e estruturar campos relacionados em um formulário.
 
-Monochrome	
-  Se refere ao número de bits por pixel em um buffer de quadros monocromáticos. Os valores são numéricos. Aceita os prefixos min/max.
-
-Orientation
-	Se refere à orientação da mídia. Os valores são portrait para vertical / retrato e landscape para horizontal / paisagem. Não aceita os prefixos min/max.
-
-Resolution	
-  Se refere à resolução, densidade por pixel, utilizada pelo dispositivo. Os valores são em DPI ou DCM. Aceita os prefixos min/max.
-
-Scan
-	Se refere ao tipo de formação de imagens para televisores. Os valores são progressive ou interlace. Não aceita os prefixos min/max.
-
-Para realizar a combinação entre os Media Types e as Media Features que formam as regras condicionais e resultam nas Media Queries, são utilizados os operadores. Dentre eles, podemos destacar:
-
-#### not:
- É utilizado quando se deseja que o resultado de uma determinada expressão seja o oposto ao real. Veja na Listagem 1 um exemplo do seu uso.
-
-#### only:
- É utilizado quando se deseja prevenir que navegadores antigos que não suportam Media Features tentem processar a expressão. Na Listagem 2 podemos ver um exemplo fiel disso.
-
-#### and: 
- É utilizado em todas as Media Queries, tendo como função primária ser o elo entre o Media Type e a Media Feature. É também responsável pelas expressões múltiplas, isto é, quando usamos mais de uma Media Feature para compor a expressão.
-
-#### “,“: 
- É utilizado para juntar duas ou mais expressões diferentes que deverão executar um mesmo conjunto de regras. Funciona como um “ou” condicional na lógica de programação.
-
-#### Exemplo de utilização do operador lógico “not”.
-
-@media not print and (min-width: 768px) {
-  body {
-      background-color: #FF0000;
-  }
-}
-
-Neste exemplo, todos os dispositivos que não forem do tipo print com largura mínima de 768 pixels terão a cor de fundo do corpo do documento vermelha. Sem o uso do operador not, o resultado seria o oposto, e a cor de fundo do corpo do documento seria vermelha para todos os dispositivos do tipo print com a largura mínima de 768 pixels.
-
-#### Exemplo de utilização do operador lógico “only”.
-
-@media only screen and (max-width: 320px) {
-  h1 {
-      text-decoration: underline;
-  }
-}
-
-Já neste exemplo, em dispositivos do tipo screen que tenham largura até 320 pixels, os elementos h1 terão seus textos exibidos com underline. Sem o operador only, a expressão iria ser executada por todos os dispositivos, e no caso de dispositivos que não suportam Media Features, somente o Media Type seria reconhecido e as mesmas seriam ignoradas.
-
-O que resultaria na execução da regra referente ao h1 em dispositivos nos quais esta não deveria ser executada.
-
-Na Listagem 3 temos uma expressão múltipla relacionada aos dispositivos do tipo screen, onde duas Media Features são utilizadas dentro de uma mesma expressão. Uma Media Feature corresponde à largura mínima de 320 pixels e outra à largura máxima de 480 pixels. Portanto, caso positiva, o elemento header terá a largura de 100% em dispositivos do tipo screen com a largura entre 320 e 480 pixels.
-
-#### Exemplo de utilização do operador lógico “and”.
-
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  header {
-      width: 100%;
-  }
-}
-
-Na Listagem 4 há duas expressões diferentes, uma para dispositivos do tipo handheld com largura máxima de 500 pixels e outra para dispositivos do tipo screen com largura máxima de 620 pixels.
-
-Ambas as expressões são totalmente independentes uma da outra, mas será executada, caso positivas, a mesma regra CSS, que consiste justamente em deixar negrito todo o texto existente dentro de um elemento de parágrafo p.
-
-#### Exemplo de utilização do operador lógico “,”.
-
-@media only handheld and (max-width: 500px), only screen and (max-width: 620px) {
-  p {
-      font-weight: bold;
-  }
-
-### Breakpoints
- Os breakpoints são delimitadores das regras CSS para atenderem diferentes especificações, que são criados pelo uso de Media Queries. Tratam-se também de uma forma de organizar o uso das Media Queries, visando a criação de blocos previamente definidos de acordo com os dispositivos que serão suportados, e onde serão inseridas as respectivas regras CSS.
-
- Isso evitará, desta forma, a utilização de diversas regras pontuais para a resolução de casos específicos.
-
- Não existe um número ou um grupo exato de breakpoints a serem utilizados. A definição dos breakpoints está diretamente ligada a características especificas do site em questão, como o conteúdo e os dispositivos que serão suportados.
-
- Portanto, um novo breakpoint deve ser criado sempre que a apresentação do conteúdo em determinado dispositivo não oferecer a melhor experiência possível ou simplesmente não for satisfatória.
-
- #### Exemplo de uso dos breakpoints.
-
-/* INICIO REGRAS PARA TODOS OS DISPOSITIVOS */
-INSIRA REGRAS CSS AQUI!
-/* FIM REGRAS PARA TODOS OS DISPOSITIVOS*/
-
-/* INICIO REGRAS PARA DISPOSITIVOS DE IMPRESSÃO */
-@media print {
-  INSIRA REGRAS CSS AQUI!
-}
-/* FIM REGRAS PARA DISPOSITIVOS DE IMPRESSÃO */
-
-/* INICIO REGRAS PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 320 PIXELS. POR EXEMPLO: SMARTHPHONES */
-@media screen and (min-width: 320px) {
-  INSIRA REGRAS CSS AQUI!
-}
-/* FIM REGRAS PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 320 PIXELS. POR EXEMPLO: SMARTHPHONES */
-
-/* INICIO REGRAS PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 768 PIXELS. POR EXEMPLO: TABLETS */
-@media screen and (min-width: 768px) {
-  INSIRA REGRAS CSS AQUI!
-}
-/* FIM REGRAS PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 768 PIXELS. POR EXEMPLO: TABLETS */
-
-/* INICIO REGRAS PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 1024 PIXELS. POR EXEMPLO: COMPUTADORES DESKTOP E NOTEBOOKS */
-@media screen and (min-width: 1024px) {
-  INSIRA REGRAS CSS AQUI!
-}
-/* FIM REGRAS PARA DISPOSITIVOS COM LARGURA MÍNIMA DE 1024 PIXELS. POR EXEMPLO: COMPUTADORES DESKTOP E NOTEBOOKS */
-
-Veja que a implementação desse tipo de estrutura é muito semelhante a estruturas já existentes em outras ferramentas e linguagens de programação, como o Visual Studio, por exemplo.
-
-Além de trazer um ar de organização ao conteúdo dos arquivos CSS, ele também ajuda na hora de buscar por determinadas regras ou selecionar um conjunto delas para alteração.
-
-Colocando em prática
-Agora que já conhecemos em detalhes o que são os termos Media Types, Media Features e Media Queries, é hora de colocar em prática o conhecimento adquirido. Neste exemplo, vamos criar um site responsivo que deverá apresentar quatro versões de layout diferentes. A saber:
-
-Primeira versão: Se refere aos dispositivos considerados pequenos, com largura até 480 pixels;
-Segunda versão: Se refere aos dispositivos considerados médios, com largura maior que 480 pixels e até 1024 pixels;
-Terceira versão: Se refere aos dispositivos considerados grandes, com largura maior que 1024 pixels;
-Quarta versão: Se refere aos dispositivos de impressão.
-Todas as quatro versões possuirão características especificas. Primeiramente, crie um documento HTML e nomeie-o como “index.html”, e adicione o conteúdo presente na Listagem 6, que se refere a estrutura inicial da página, contendo apenas algumas declarações das tags que vimos anteriormente, bem como um título e uma tag h1 no corpo da página.
-
-Listagem 6. Marcação HTML inicial.
-
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-
-      <!-- INICIO META TAGS -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- FIM META TAGS -->
-
-      <!-- INICIO TITULO DO DOCUMENTO -->
-      <title>Teste Layout Responsivo</title>
-      <!-- FIM TITULO DO DOCUMENTO -->
-
-  </head>
-  <body>
-
-      <!-- INICIO TITULO DA PÁGINA -->
-      <h1 class="titulo">Teste Layout Responsivo</h1>
-      <!-- FIM TITULO DA PÁGINA -->
-
-  </body>
-</html>
-
-/* INICIO REGRAS CSS REFERENTES À PRIMEIRA VERSÃO */
-@media only screen and (max-width: 480px) {
-
-  body {
-      background-color: #D46A6A;
-      color: #FFF;
-  }
-
-  .conteudo-dispositivo.pequeno {
-      display: block;
-  }
-
-}
-/* INICIO REGRAS CSS REFERENTES À SEGUNDA VERSÃO */
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-
-  body {
-      background-color: #758AA8;
-      color: #FFF;
-  }
-
-  .conteudo-dispositivo.medio {
-      display: block;
-  }
-
-}
-
-/* INICIO REGRAS CSS REFERENTES À TERCEIRA VERSÃO */
-@media only screen and (min-width: 1025px) {
-
-  body {
-      background-color: #D4CE6A;
-      color: #000;
-  }
-
-  .conteudo-dispositivo.grande {
-      display: block;
-  }
-
-}
-/* INICIO REGRAS CSS REFERENTES À QUARTA VERSÃO */
-@media print {
-
-  .titulo {
-      margin: 0 0 50px;
-      text-align: left;
-  }
-
-  .conteudo-dispositivo {
-      text-align: left;
-  }
-
-  body {
-      background-color: #FFF;
-      color: #000;
-  }
-
-  .conteudo-dispositivo.impressao {
-      display: block;
-  }
-
-}
-
-#### Media types
-  A Listagem 1 apresenta um exemplo de uso do @media que altera a cor do texto dependendo do tipo de mídia. Dessa forma, quando a página for acessada de um browser, visualizaremos a cor azul; já em modo de impressão, visualizaremos a cor vermelha.
-
-@media screen {
-    body {
-        color: blue;
-    }
-}
-@media print {
-    body {
-        color: red;
-    }
-}
-
-#### Media Queries
-
-Os operadores not e only permitem negar um tipo de mídia, ou especificar que apenas determinado tipo seja atendido, respectivamente. Por exemplo, a expressão not speech faria com que as regras não fossem aplicadas a leitores de tela, enquanto que only screen faria com que apenas telas fossem atendidas.
-
-Por sua vez, o operador and faz a ligação entre o tipo de mídia e o filtro adicional que será especificado entre parênteses, no lugar de query. Nesse ponto podemos utilizar as diversas propriedades da mídia, como orientação, largura e altura, para obter os resultados desejados.
-
-Na Listagem 2 temos um exemplo de uso das media queries. Com esse código, aplicamos o plano de fundo azul para páginas com até 640px de largura e vermelho para aquelas com até 480px de largura. Acima de 640px, o comportamento padrão será assumido, ou seja, será mantida a página branca.
-
-@media screen and (max-width: 640px){
-    body {
-        background-color: blue;
-    }
-}
-@media screen and (max-width: 480px){
-    body {
-        background-color: red;
-    }
-}
-
-#### Reset específico para alguns elementos
-
-O reset do CSS dos elementos é uma operação bastante simples, porém, muitas vezes acabamos esquecendo desse passo quando começamos a desenvolver de forma responsiva. No geral, isso leva a designs “quebrados” em alguns navegadores, mas que potencialmente funcionam bem em outros.
-
-No caso de nosso exemplo, precisamos resetar apenas os elementos <html>, <body> e <h2>, uma vez que estamos utilizando somente eles. Dessa forma, um CSS como o da Listagem 1 seria suficiente.
-
-html, body, h2
-{
-    margin: 0;
-    padding: 0;
-}
-
-#### Reset para todos os elementos
-
-Caso a complexidade do HTML aumente, podemos concluir que a abordagem anterior pode prejudicar a construção da interface. Seria necessário controlar o reset de muitos elementos. Diante disso, o CSS traz uma outra possibilidade de reset, mais simples, e que permite que tenhamos todos os elementos do DOM como alvo: através do operador *. Vejamos um exemplo no código abaixo:
-
-* { margin: 0; padding: 0; }
-Com isso, ao invés de informarmos cada elemento do DOM que será resetado, com o operador * determinamos que todos eles o serão. Assim, é garantido que, independentemente do que for inserido no HTML, teremos um design responsivo sem diferenças entre os navegadores.
-
-### Resumo sobre @media no CSS:
-
-A regra @media é uma parte fundamental do CSS que permite aplicar estilos específicos com base em certas condições de mídia, como tamanho de tela, orientação, resolução e muito mais. Isso permite que os desenvolvedores criem layouts responsivos e adaptem o design da página a diferentes dispositivos e contextos.
-
-Sintaxe:
-
-css
-
-@media tipo-de-mídia e (condições) {
-  /* Estilos a serem aplicados para essa mídia e condições */
-}
-Exemplos de tipos de mídia:
-
-screen: Dispositivos de tela, como monitores, tablets e smartphones.
-print: Dispositivos de impressão, como impressoras.
-speech: Dispositivos de fala, como leitores de tela.
-
-Exemplos de condições:
-width: Largura da janela do navegador.
-height: Altura da janela do navegador.
-min-width / max-width: Largura mínima / máxima da janela.
-min-height / max-height: Altura mínima / máxima da janela.
-orientation: Orientação da tela (retrato ou paisagem).
-resolution: Resolução da tela.
-aspect-ratio: Proporção de aspecto da tela.
-E muitos outros...
-Exemplos de uso:
-
-Aplicar estilos diferentes para dispositivos móveis e desktops:
-css
-
-@media screen and (max-width: 768px) {
-  /* Estilos para dispositivos móveis */
-}
-
-@media screen and (min-width: 769px) {
-  /* Estilos para desktops */
-}
-Ocultar um elemento em dispositivos de impressão:
-css
-
-@media print {
-  .elemento-a-ser-ocultado {
-    display: none;
-  }
-}
-Ajustar estilos com base na orientação da tela:
-css
-
-@media screen and (orientation: landscape) {
-  /* Estilos para orientação paisagem */
-}
-
-@media screen and (orientation: portrait) {
-  /* Estilos para orientação retrato */
-}
-Adaptar estilos para telas de alta resolução:
-css
-
-@media screen and (min-resolution: 2dppx) {
-  /* Estilos para telas de alta resolução */
-}
-Criar uma folha de estilos específica para leitores de tela:
-css
-
-@media speech {
-  /* Estilos para leitores de tela */
-}
-A regra @media é uma ferramenta poderosa para criar designs flexíveis e responsivos, permitindo que os desenvolvedores ajustem o layout e o estilo de uma página com base nas características do dispositivo e da mídia em que está sendo exibida.
+Em resumo, as tags e elementos mencionados formam a base para a criação de formulários interativos em HTML. Eles permitem que os desenvolvedores coletem, processem e validem informações dos usuários, proporcionando uma experiência de entrada de dados amigável e eficiente.
