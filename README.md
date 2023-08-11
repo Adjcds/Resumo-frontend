@@ -497,6 +497,9 @@ Padronização das configurações iniciais dos elementos HTML para evitar incon
 
 Em resumo, o design responsivo em HTML5 é uma abordagem essencial para criar sites que se adaptam harmoniosamente a diferentes dispositivos e tamanhos de tela, melhorando a usabilidade e a experiência do usuário em todas as situações. O uso de Media Types, Media Queries e breakpoints permite personalizar a aparência e o comportamento do site em diferentes contextos, enquanto o reset CSS ajuda a garantir uma base sólida para o estilo em todos os navegadores.
 
+
+## Aula 9 
+
 ### Formulários 
 podem ser usados em uma variedade de contextos. Páginas de contato, login e cadastro, são alguns exemplos de uso de formulário.
 
@@ -549,3 +552,31 @@ A tag fieldset agrupa elementos de formulário relacionados. A tag legend é usa
 
 Em resumo, as tags e elementos mencionados formam a base para a criação de formulários interativos em HTML. Eles permitem que os desenvolvedores coletem, processem e validem informações dos usuários, proporcionando uma experiência de entrada de dados amigável e eficiente.
 
+## Aula 10 
+
+### Publique seu site na internet
+
+Na aula anterior vimos como executar projetos web através de um servidor web local, simulando o acesso à internet. O servidor utilizado foi o Apache e a sua instalação foi realizada com o uso do XAMPP.
+
+Nesta pasta referente a aula 9 projeto viagens para executar basta abrir o xampp e ir em arquivos, depois procurar uma pasta chamada htdocs e adcionar o projeto, no caso foi adicionado o projeto viagens depois ultilizar no navegador localhost/viagens. Assim o site ira aparecer na sua maquina no navegador. 
+
+Neste ponto apresentaremos uma alternativa ao Apache: a ferramenta Node.js e seu servidor web http-server.
+
+A ideia agora é você aprender a configurar um servidor web local através do Node.js. Com isso, você vai começar a se preparar para aprender a linguagem JavaScript — assunto do próximo módulo.
+
+Dessa forma, você conseguirá entender o funcionamento do Node.js na criação de servidores web locais em projetos maiores como, por exemplo, na criação de projetos em React.
+
+#### O Node.js
+
+O XAMPP não é a única forma de se criar um servidor web local (Apache) para testar os nossos projetos web. Na verdade, existem diversos servidores web disponíveis. Nesta aula conheceremos o Node.js. De uma forma simples, podemos entender o Node.js como uma ferramenta gratuita que nos permite executar código JavaScript. Nosso objetivo neste curso é aprender a usar o Node.js e seu servidor web, o http-server.Ao utilizar o Node.js você vai começar a se familiarizar com o ambiente de programação JavaScript — assunto do próximo módulo.
+
+A partir desse momento o Node.js já pode ser utilizado para realizar a instalação de um servidor web http-server.
+O Node.js também é bastante utilizado na criação de códigos JavaScript para a construção de APIs e também na integração de aplicações back-end com o front-end.
+
+Como próximo passo no processo de configuração do nosso servidor web, vamos agora iniciar o processo de instalação do http-server. No seu terminal digite o comando ( npm install --global http-server). Para executar o http-server vamos primeiro acessar, via terminal, a pasta que está armazenando o nosso projeto web.
+
+depois acesse ao seu prompt comando, digite dir para acessar os arquivos e cd para selecionar ate o seu projeto. depois disso coloque (https-server -o)
+
+abrira o projeto no seu navegador
+
+depois feche o programa e fça a instalação do vercel ( npm install --global vercel )
